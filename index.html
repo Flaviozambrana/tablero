@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FLAVIO CHESS MUSIC</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================================
+   AVIDEZ CHESS PLAYER
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:
+    radial-gradient(circle at top left,#00d9ff33,transparent 25%),
+    radial-gradient(circle at bottom right,#ff880033,transparent 25%),
+    linear-gradient(135deg,#020617,#0f172a,#000);
+
+    overflow-x:hidden;
+
+    color:white;
+
+    font-family:'Poppins',sans-serif;
+
+    min-height:100vh;
+
+    position:relative;
+
+}
+
+/* PARTICULAS */
+
+body::before{
+
+    content:'';
+
+    position:fixed;
+
+    width:100%;
+    height:100%;
+
+    background-image:
+    radial-gradient(#ffffff11 1px,transparent 1px);
+
+    background-size:40px 40px;
+
+    animation:fondoMove 15s linear infinite;
+
+}
+
+@keyframes fondoMove{
+
+    from{
+        transform:translateY(0px);
+    }
+
+    to{
+        transform:translateY(-40px);
+    }
+
+}
+
+/* TITULO */
+
+.main-title{
+
+    text-align:center;
+
+    padding:40px 20px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.main-title h1{
+
+    font-size:65px;
+
+    font-family:'Orbitron',sans-serif;
+
+    background:linear-gradient(90deg,#00d9ff,#ff8800,#ffe600);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    letter-spacing:5px;
+
+}
+
+.main-title p{
+
+    color:#94a3b8;
+
+    letter-spacing:4px;
+
+    margin-top:10px;
+
+}
+
+/* TABLERO */
+
+.board{
+
+    width:95%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    border:4px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 0 40px #00d9ff33,
+    0 0 80px #ff880022;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* CASILLAS */
+
+.square{
+
+    aspect-ratio:1/1;
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+}
+
+.square:hover{
+
+    transform:scale(1.03);
+
+    z-index:3;
+
+}
+
+/* COLORES */
+
+.white{
+
+    background:
+    linear-gradient(145deg,#f8fafc,#cbd5e1);
+
+}
+
+.black{
+
+    background:
+    linear-gradient(145deg,#1e293b,#0f172a);
+
+}
+
+/* VIDEOS */
+
+.square iframe{
+
+    width:100%;
+    height:100%;
+
+    border:none;
+
+    filter:saturate(1.2) contrast(1.05);
+
+}
+
+/* GLOW */
+
+.square::before{
+
+    content:'';
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    background:linear-gradient(145deg,#00d9ff11,#ff880011);
+
+    pointer-events:none;
+
+}
+
+/* FOOTER */
+
+.footer{
+
+    text-align:center;
+
+    padding:40px;
+
+    color:#64748b;
+
+    letter-spacing:3px;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.main-title h1{
+
+    font-size:34px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="main-title">
+
+<h1>
+FLAVIO CHESS MUSIC
+</h1>
+
+<p>
+DIGITAL VISUAL BOARD
+</p>
+
+</div>
+
+<div class="container-fluid">
+
+<div class="board">
+
+<!-- FILA 1 -->
+
+<div class="row g-0">
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/OIgqFQWnXwU?autoplay=1&mute=1&loop=1&playlist=OIgqFQWnXwU"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+<div class="col square black"></div>
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/ZnKmNz46LGk?autoplay=1&mute=1&loop=1&playlist=ZnKmNz46LGk"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+<div class="col square black"></div>
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/S0qygzcIbpE?autoplay=1&mute=1&loop=1&playlist=S0qygzcIbpE"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+<div class="col square black"></div>
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/uYEjgj_RCPI?autoplay=1&mute=1&loop=1&playlist=uYEjgj_RCPI"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+<div class="col square black"></div>
+
+</div>
+
+<!-- FILA 2 -->
+
+<div class="row g-0">
+
+<div class="col square black"></div>
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/IwvFhDqlS5Q?autoplay=1&mute=1&loop=1&playlist=IwvFhDqlS5Q"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+<div class="col square black"></div>
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/QNStfUy15Ek?autoplay=1&mute=1&loop=1&playlist=QNStfUy15Ek"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+<div class="col square black"></div>
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/OIgqFQWnXwU?autoplay=1&mute=1&loop=1&playlist=OIgqFQWnXwU"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+<div class="col square black"></div>
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/ZnKmNz46LGk?autoplay=1&mute=1&loop=1&playlist=ZnKmNz46LGk"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+</div>
+
+<!-- FILA 3 -->
+
+<div class="row g-0">
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/S0qygzcIbpE?autoplay=1&mute=1&loop=1&playlist=S0qygzcIbpE"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+<div class="col square black"></div>
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/uYEjgj_RCPI?autoplay=1&mute=1&loop=1&playlist=uYEjgj_RCPI"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+<div class="col square black"></div>
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/IwvFhDqlS5Q?autoplay=1&mute=1&loop=1&playlist=IwvFhDqlS5Q"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+<div class="col square black"></div>
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/QNStfUy15Ek?autoplay=1&mute=1&loop=1&playlist=QNStfUy15Ek"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+<div class="col square black"></div>
+
+</div>
+
+<!-- FILA 4 -->
+
+<div class="row g-0">
+
+<div class="col square black"></div>
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/OIgqFQWnXwU?autoplay=1&mute=1&loop=1&playlist=OIgqFQWnXwU"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+<div class="col square black"></div>
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/ZnKmNz46LGk?autoplay=1&mute=1&loop=1&playlist=ZnKmNz46LGk"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+<div class="col square black"></div>
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/S0qygzcIbpE?autoplay=1&mute=1&loop=1&playlist=S0qygzcIbpE"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+<div class="col square black"></div>
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/uYEjgj_RCPI?autoplay=1&mute=1&loop=1&playlist=uYEjgj_RCPI"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+</div>
+
+<!-- FILA 5 -->
+
+<div class="row g-0">
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/IwvFhDqlS5Q?autoplay=1&mute=1&loop=1&playlist=IwvFhDqlS5Q"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+<div class="col square black"></div>
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/QNStfUy15Ek?autoplay=1&mute=1&loop=1&playlist=QNStfUy15Ek"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+<div class="col square black"></div>
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/OIgqFQWnXwU?autoplay=1&mute=1&loop=1&playlist=OIgqFQWnXwU"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+<div class="col square black"></div>
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/ZnKmNz46LGk?autoplay=1&mute=1&loop=1&playlist=ZnKmNz46LGk"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+<div class="col square black"></div>
+
+</div>
+
+<!-- FILA 6 -->
+
+<div class="row g-0">
+
+<div class="col square black"></div>
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/S0qygzcIbpE?autoplay=1&mute=1&loop=1&playlist=S0qygzcIbpE"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+<div class="col square black"></div>
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/uYEjgj_RCPI?autoplay=1&mute=1&loop=1&playlist=uYEjgj_RCPI"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+<div class="col square black"></div>
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/IwvFhDqlS5Q?autoplay=1&mute=1&loop=1&playlist=IwvFhDqlS5Q"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+<div class="col square black"></div>
+
+<div class="col square white">
+<iframe src="https://www.youtube.com/embed/QNStfUy15Ek?autoplay=1&mute=1&loop=1&playlist=QNStfUy15Ek"
+allow="autoplay"
+allowfullscreen></iframe>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+
+FLAVIO • MUSIC • DIGITAL EXPERIENCE
+
+</div>
+
+</body>
+</html>
